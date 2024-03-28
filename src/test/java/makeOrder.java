@@ -12,9 +12,14 @@ public class MakeOrder {
     @Test
     public static void order() throws InterruptedException {
 
+        String expectedTitle = "STORE";
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.demoblaze.com/index.html#");
         driver.manage().window().maximize();
+        String actualTitle = driver.getTitle();
+
+        
+        Assert.assertEquals(actualTitle,expectedTitle);
 
         Thread.sleep(2000);
 
