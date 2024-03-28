@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import javax.swing.*;
 
-public class makeOrder {
+public class MakeOrder {
     @Test
     public static void order() throws InterruptedException {
 
