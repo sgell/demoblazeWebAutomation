@@ -9,10 +9,14 @@ public class SendContact {
     @Test
     public static void contact() throws InterruptedException {
 
+        String expectedTitle = "STORE";
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.demoblaze.com/index.html");
+        String actualTitle = driver.getTitle();
 
+        Assert.assertEquals(actualTitle,expectedTitle);
+        
         //contact form
         WebElement contact = driver.findElement(By.xpath("//a[normalize-space()=" +
                 "'Contact']"));
